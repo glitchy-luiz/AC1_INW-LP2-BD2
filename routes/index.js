@@ -5,7 +5,7 @@ module.exports = (app) => {
 
 
     app.post('/', (req, res)=> {
-        var conexao = require('../config/database')
+        var conexao = require('../config/bancodedados')
         conexao()
 
         var modelo = require('../models/mensagem')
