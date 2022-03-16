@@ -44,5 +44,5 @@
 }
 
 .intro-content, .grid {
-    grid-template-columns: lrf;
+    grid-template-columns: 1fr;
 }

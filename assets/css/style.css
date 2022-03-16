@@ -129,7 +129,7 @@ p {
 
 .menu ul li a:hover::after {
     width: 50%;
-    width: 25%;
+    left: 25%;
 }
 
 .close-menu {
@@ -140,7 +140,7 @@ p {
 /* Linha secreta de Código */
 .intro-content {
     position: relative;
-    /*top -8rem; */
+    /*top: -8rem;*/ 
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 3rem;
@@ -160,7 +160,7 @@ p {
     height: auto;
 }
 
-.top3-content {
+.top3-content{
     max-width: 64rem;
     display: flex;
     flex-direction: column;
@@ -170,36 +170,36 @@ p {
     text-align: center;
 }
 
-.grid-one-content {
+.grid-one-content{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     min-height: 100vh;
 }
 
-.grid-main-heading {
+.grid-main-heading{
     margin-bottom: 1rem;
 }
 
-.grid-description {
+.grid-description{
     padding-bottom: 5rem;
 }
 
-.grid {
+.grid{
     display: grid;
-    grid-template-columns: repeat(3, 1rf);
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     counter-reset: grid-counter;
 }
 
-.grid h3 {
+.grid h3{
     font-size: 3rem;
     position: relative;
     padding-left: 5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
 }
 
-.grid h3::before {
+.grid h3::before{
     counter-increment: grid-counter;
     content: counter(grid-counter);
     position: absolute;
@@ -210,26 +210,26 @@ p {
     transform: rotate(5deg);
 }
 
-.gallery-img {
+.gallery-img{
     width: 100%;
     max-width: 36rem;
     max-height: 36rem;
     overflow: hidden;
 }
 
-.gallery-img img {
+.gallery-img img{
     transition: all 300ms ease-in-out;
 }
 
-.gallery-img img:hover {
+.gallery-img img:hover{
     transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
 }
-/* Linha secreta de Código */
-.contact-form {
+
+.contact-form{
     grid-column: span 2;
 }
 
-.contact-form .form-grid {
+.contact-form .form-grid{
     border: none;
     display: flex;
     flex-direction: row;
@@ -237,76 +237,76 @@ p {
     gap: 3rem;
 }
 
-.form-grid legend {
+.form-grid legend{
     font-style: italic;
     font-size: 1.6rem;
     margin-bottom: 3rem;
 }
 
-.form-group {
+.form-group{
     flex: 1 1 320px;
 }
 
-.form-group label {
+.form-group label{
     display: block;
     margin-bottom: 1rem;
 }
 
-.form-group input, .form-group textarea {
+.form-group input, .form-group textarea{
     border: none;
-    background: #ffffff;
+    background: #fff;
     padding: 1.5rem 2rem;
     width: 100%;
     font-size: 3rem;
     outline: none;
 }
 
-.form-group input:focus, .form-group textarea:focus {
-    box-shadow: 0 0 10px 2px crimson;
+.form-group input:focus, .form-group textarea:focus{
+    box-shadow:0 0 10px 2px crimson;
 }
-/* Linha secreta de Código */
-.form-group button {
-    border: 0.5rem solid  #ffffff;
+
+.form-group button{
+    border: 0.5rem solid #fff;
     background: none;
-    color: #ffffff;
+    color: #fff;
     padding: 1.5rem 2rem;
     font-size: 3rem;
     cursor: pointer;
     transition: all 300ms ease-in-out;
 }
 
-.form-group button:hover {
-    background: #ffffff;
+.form-group button:hover{
+    background: #fff;
     color: #0a1128;
 }
 
-.form-group::placeholder {
-    color: #eeeeee;
+.form-group ::placeholder{
+    color:darkgrey;
 }
-/* Linha secreta de Código */
-.footer {
+
+.footer{
     text-align: center;
     font-size: 1.6rem;
 }
 
-.footer a {
+.footer a{
     color: #0a1128;
 }
 
-.heart {
-    color: crimson;
+.heart{
+    color:  crimson;
 }
 
-.footer p {
+.footer p{
     margin: 0;
     padding: 3rem;
 }
 
-.back-to-stop {
+.back-to-top{
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background: #ffffff;
+    background: #fff;
     width: 5rem;
     height: 5rem;
     display: flex;
