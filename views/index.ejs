@@ -61,21 +61,12 @@
         <div class="main-content grid-one-content">
             <h2 class="grid-main-heading">My Grid</h2>
             <div class="grid">
+                <% for (var n=0; n<dados.length;n++){%>
                 <article>
-                    <h3>Teste 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum neque blanditiis at voluptates 
-                    perferendis, dicta voluptatibus. Aspernatur repellat iste architecto, vero laboriosam quos odio ex fugit illo in accusantium! Eaque?</p>
+                    <h3><%=dados[n].titulo%></h3>
+                    <p><%=dados[n].texto%></p>
                 </article>
-                <article>
-                    <h3>Teste 2</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum veritatis obcaecati incidunt
-                    corrupti consequatur. Illo rerum culpa veritatis cumque enim id adipisci consequuntur autem impedit, excepturi officia odit vitae quo?</p>
-                </article>
-                <article>
-                    <h3>Teste 3</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore aperiam, voluptate explicabo
-                    iste maiores facilis voluptatem distinctio? Sunt voluptatum facilis autem dolor numquam, delectus non minus officia esse, tempore voluptatibus.</p>
-                </article>
+                <% } %>
             </div>
         </div>
     </section>

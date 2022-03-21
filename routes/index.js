@@ -1,14 +1,21 @@
 module.exports = (app) => {
+    var conexao = require('../config/bancodedados')
+    conexao()
+    var modelo = require('../models/mensagem')
+
     app.get('/', (req,res) => {
-        res.render('index.ejs')
+        var mygrid = await modelo.find()
+        .then((mygrid)=>{
+            res.render('index.ejs',{dados:mygrid})
+            console.log(mygrid)
+        })
+        .catch(()=>{
+            res.render('index.ejs')
+        })
     })
 
 
     app.post('/', (req, res)=> {
-        var conexao = require('../config/bancodedados')
-        conexao()
-
-        var modelo = require('../models/mensagem')
 
         var documento = new modelo({
 
