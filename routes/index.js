@@ -1,10 +1,11 @@
 module.exports = (app) => {
     var conexao = require('../config/bancodedados')
     conexao()
-    var modelo = require('../models/mensagem')
+    var mensagens = require('../models/mensagem')
+    var mygrids = require('../models/mygrid')
 
-    app.get('/', (req,res) => {
-        var mygrid = await modelo.find()
+    app.get('/', async(req,res) => {
+        var mygrid = await mygrids.find().limit(3).sort({'_id':-1})
         .then((mygrid)=>{
             res.render('index.ejs',{dados:mygrid})
             console.log(mygrid)
@@ -17,7 +18,7 @@ module.exports = (app) => {
 
     app.post('/', (req, res)=> {
 
-        var documento = new modelo({
+        var mygrid = new mensagens({
 
                 nome: req.body.first_name,
                 sobrenome: req.body.last_name,
