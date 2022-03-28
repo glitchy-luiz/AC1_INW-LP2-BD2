@@ -3,16 +3,14 @@ module.exports = (app) => {
     conexao()
     var mensagens = require('../models/mensagem')
     var mygrids = require('../models/mygrid')
+    var gallery = require('../models/gallery')
 
     app.get('/', async(req,res) => {
-        var mygrid = await mygrids.find().limit(3).sort({'_id':-1})
-        .then((mygrid)=>{
-            res.render('index.ejs',{dados:mygrid})
-            console.log(mygrid)
-        })
-        .catch(()=>{
-            res.render('index.ejs')
-        })
+        var mygrid = await mygrids.find().limit(6).sort({'_id':-1})
+        var imagens = await gallery.find().limit(6).sort({'_id':-1})
+
+        res.render('index.ejs',{dados:mygrid,gallery:imagens})
+            //console.log(mygrid)
     })
 
 

@@ -75,24 +75,11 @@
         <div class="main-content grid-one-content">
             <h2 class="grid-main-heading">Gallery</h2>
             <div class="grid">
+                <% for (var i=0;i<gallery.length;i++){ %>
                 <div class="gallery-img">
-                    <img src="http://source.unsplash.com/random/360x360?r=1" alt="random image from unsplash"/>
+                    <img src="./assets/images/<%=gallery[i].arquivo%>" width="100%"/>
                 </div>
-                <div class="gallery-img">
-                    <img src="http://source.unsplash.com/random/360x360?r=2" alt="random image from unsplash"/>
-                </div>
-                <div class="gallery-img">
-                    <img src="http://source.unsplash.com/random/360x360?r=3" alt="random image from unsplash"/>
-                </div>
-                <div class="gallery-img">
-                    <img src="http://source.unsplash.com/random/360x360?r=4" alt="random image from unsplash"/>
-                </div>
-                <div class="gallery-img">
-                    <img src="http://source.unsplash.com/random/360x360?r=5" alt="random image from unsplash"/>
-                </div>
-                <div class="gallery-img">
-                    <img src="http://source.unsplash.com/random/360x360?r=6" alt="random image from unsplash"/>
-                </div>
+                <%}%>
             </div>
         </div>
     </section>
