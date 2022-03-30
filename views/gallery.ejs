@@ -7,15 +7,17 @@
     <title>Gallery - Admin</title>
 </head>
 <body>
+    <div class="container">
     <h1><a href="/admin">↩</a>Imagens - Gallery</h1>
     <h3>Adicionar Imagens</h3>
     <form action="" method="post" enctype="multipart/form-data">
         <label for="imagem">Imagem:</label></br>
         <input type="file" name="imagem" id="imagem"></br>
+        <h5>O arquivo deve ter o tamanho máximo de 100kb e os tipos (png, jpg. jpeg)</h5>
         <input type="submit" value="Gravar">
     </form>
     <h3>Listar Imagens gravadas</h3>
-    <table>
+    <table class="table table-hover">
         <tr>
             <th>Nome do arquivos</th>
             <th>Preview</th>
@@ -28,5 +30,6 @@
             </tr>
             <%}%>
     </table>
+    </div>
 </body>
 </html>

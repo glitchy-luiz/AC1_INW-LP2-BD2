@@ -14,7 +14,23 @@ const armazenamento = multer.diskStorage(
         }
     }
 )
-
-var upload = multer({storage:armazenamento})
+//definimos que o tamanho máximo é de 100kb (100*1024)
+var tamanho = 100*1024
+var upload = multer({
+    storage:armazenamento,
+    limits:{fileSize:tamanho},
+    fileFilter:(req,file,cb)=>{
+        if(
+            file.mimetype == "image/png" ||
+            file.mimetype == "image/jpg" ||
+            file.mimetype == "image/jpeg"
+        ){
+            cb(null,true)
+        }else{
+            cb(null,false)
+            return cb(new Error('Tipo de arquivo inválido'))
+        }
+    }
+}).single('imagem')
 
 module.exports = upload
